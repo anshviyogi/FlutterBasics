@@ -53,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Container(
                 margin: EdgeInsets.only(right: 11),
-                height: 200,
-                width: 200,
+                height: 100,
+                width: 100,
                 color: Colors.green,
               ),
               Container(
