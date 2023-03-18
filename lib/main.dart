@@ -29,14 +29,7 @@ class FlutterScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: Center(
-        child: CircleAvatar(
-          // child: , - also has a child attribute
-          backgroundImage: AssetImage('assets/images/avatar.png'),
-          backgroundColor: Colors.green,
-          radius: 100, // used for increasing and decreasing the size of avatar
-        ),
-      )
+      body: Center(child: Text("Hello Ansh", style: TextStyle(fontFamily: "FontName",fontSize: 25),))
     );
   }
 
