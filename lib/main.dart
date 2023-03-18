@@ -29,13 +29,15 @@ class FlutterScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: ListView.separated(itemBuilder: (context, index) {
-        return Text(array[index]);
+      body: ListView.builder(itemBuilder: (context, index) {
+        return ListTile(
+          leading: Text('${index + 1}'),
+          title: Text(array[index]),
+          subtitle: Text("Number"),
+          trailing: Icon(Icons.add),
+        );
       },itemCount: array.length,
       //  Separated builder class for the seperation of lists
-      separatorBuilder: (context,index){
-        return Divider(height: 100,thickness: 4.2,);
-      },
       )
     );
   }
