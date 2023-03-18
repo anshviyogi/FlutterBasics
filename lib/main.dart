@@ -29,15 +29,13 @@ class FlutterScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: ListView.builder(itemBuilder: (context, index) {
-        return ListTile(
-          leading: Text('${index + 1}'),
-          title: Text(array[index]),
-          subtitle: Text("Number"),
-          trailing: Icon(Icons.add),
-        );
-      },itemCount: array.length,
-      //  Separated builder class for the seperation of lists
+      body: Center(
+        child: CircleAvatar(
+          // child: , - also has a child attribute
+          backgroundImage: AssetImage('assets/images/avatar.png'),
+          backgroundColor: Colors.green,
+          radius: 100, // used for increasing and decreasing the size of avatar
+        ),
       )
     );
   }
