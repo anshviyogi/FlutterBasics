@@ -20,39 +20,20 @@ class FlutterApp extends StatelessWidget {
 }
 
 class FlutterScreen extends StatelessWidget {
+
+  var array = ["ansh","vansh","akash","me"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: Container(
-        color: Colors.blue.shade50,
-        width: double.infinity,
-        height: double.infinity,
-        child: Center(
-          child: Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              // borderRadius: BorderRadius.only(topLeft: Radius.circular(10)),
-              border: Border.all(
-                width: 5,
-                color: Colors.black
-              ),
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 11,
-                  // spreadRadius: 10, - increase the size of the radius
-                  color: Colors.blueGrey
-                )
-              ],
-              shape: BoxShape.circle
-            ),
-          ),
-        ),
-      ),
+      body: ListView.builder(itemBuilder: (context, index) {
+        return Text(array[index]);
+      },itemCount: array.length,
+      itemExtent: 100,
+      )
     );
   }
 
